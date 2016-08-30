@@ -1,8 +1,6 @@
 module.exports = function(app) {
     'use strict';
     const express = require('express');
-    const UserHandler = app.Handlers.UserHandler;
-    // const passport = require('passport');
     const router = express.Router();
 
     const dev = app.get('env') !== 'production';
