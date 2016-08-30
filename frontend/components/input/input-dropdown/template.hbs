@@ -1,0 +1,37 @@
+<div class= {{if show 'selectLable active' 'selectLable' }} {{action "openSelect"}} title= {{title}}>
+    {{#if helper}}
+        {{helper helper value}}
+    {{else}}
+        {{value}}
+    {{/if}}
+    {{#if info}} <span>({{info}})</span>{{/if}}
+    {{svg-icon icon='arrowSolidDown' size=7}}
+</div>
+
+{{#if show}}
+    {{#if height}}
+        {{#scroll-costume bubbleUp=false height=height classNames=(if openUp 'selectList shedow openUp' 'selectList shedow') }}
+            {{#each values as |item|}}
+                <div class= {{if (eq value item) 'item active' 'item'}} {{action "select" item}}>
+                    {{#if helper}}
+                        {{helper helper item}}
+                    {{else}}
+                        {{item}}
+                    {{/if}}
+                </div>
+            {{/each}}
+        {{/scroll-costume}}
+    {{else}}
+        <div class= {{if openUp 'selectList shedow openUp' 'selectList shedow'}}>
+            {{#each values as |item|}}
+                <div class= {{if (eq value item) 'item active' 'item'}} {{action "select" item}}>
+                    {{#if helper}}
+                        {{helper helper item}}
+                    {{else}}
+                        {{item}}
+                    {{/if}}
+                </div>
+            {{/each}}
+        </div>
+    {{/if}}
+{{/if}}

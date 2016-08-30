@@ -1,0 +1,16 @@
+<div class="tagInput">
+    {{input value=tag enter='add'}}
+    <button type='button' class="add" {{action 'add' tag}}>ADD</button>
+</div>
+<div class="tags">
+    {{#each tags as |tag|}}
+        <div class="tag">
+            <span class="text" {{action 'setTag' tag}}>
+                {{tag}}
+            </span>
+            <span class='rm' {{action 'rm' tag}}>
+                {{svg-icon icon='close' size=12}}
+            </span>
+        </div>
+    {{/each}}
+</div>

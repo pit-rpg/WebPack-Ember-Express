@@ -1,0 +1,9 @@
+<!--{{#if itemsCout}}-->
+<nav class="center">
+  <ul class="pagination">
+    {{#each pages as |page|}}
+      <li class={{if page.active 'active'}}><a {{action 'goTo' page.id}}>{{page.pageNum}}</a></li>
+    {{/each}}
+  </ul>
+</nav>
+<!--{{/if}}-->

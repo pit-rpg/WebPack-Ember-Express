@@ -1,0 +1,9 @@
+{{#if size}}
+    <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" style={{concat 'width: ' size 'px; height: ' size 'px;'}}>
+        <use class={{icon}} xlink:href={{mIcon}} style={{concat 'width: ' size 'px; height: ' size 'px;'}}></use>
+    </svg>
+{{else}}
+    <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon">
+        <use class={{icon}} xlink:href={{mIcon}}></use>
+    </svg>
+{{/if}}

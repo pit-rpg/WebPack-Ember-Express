@@ -1,0 +1,57 @@
+@import "../../../colorsVars.less";
+@size: 19px;
+.slider {
+    cursor: pointer;
+    height: @size;
+    display: block;
+    position: relative;
+    .rangeComponent {
+        width: @size;
+        height: @size;
+        display: inline-block;
+    }
+    .rangeComponent:hover,
+    .rangeComponent:active {
+        color: #933;
+    }
+    .left {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .right {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .center {
+        display: block;
+        width: 100%;
+        .arrow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #E84663;
+            border-radius: @size;
+            border: solid 2px #1F2636;
+        }
+        .line {
+            position: relative;
+            top: 8px;
+            height: 3px;
+            width: 100%;
+            background-color: @colorLendingBg;
+            border-radius: 4px;
+        }
+    }
+    .center:hover .line {
+        background-color: #7B8AAB;
+    }
+    .end {
+        // background: rgba(0, 0, 0, 0.2);
+    }
+    margin: 0;
+}
+.slider .edges {
+    padding: 0 @size;
+}

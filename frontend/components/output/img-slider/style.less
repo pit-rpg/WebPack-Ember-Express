@@ -1,0 +1,64 @@
+@import "../../../colorsVars.less";
+.img-slider {
+    @iconWith: 32px;
+    @dotWith: 6px;
+    @bit: 32px;
+    @bit2: 24px;
+    position: relative;
+    overflow: hidden;
+    img {
+        width: 100%;
+    }
+    .dots {
+        position: absolute;
+        bottom: @bit2+10px;
+        left: 0;
+        width: 100%;
+        padding: 0 (@bit+@bit2);
+        text-align: center;
+        .dot {
+            margin: 0 5px;
+            cursor: pointer;
+            width: @dotWith;
+            height: @dotWith;
+            border-radius: 10px;
+            background-color: @blueDot;
+            display: inline-block;
+        }
+        .dot.active,
+        .dot:active,
+        .dot:hover {
+            background-color: @blue2;
+        }
+    }
+    .next,
+    .prev {
+        width: @iconWith;
+        height: @iconWith;
+        position: absolute;
+        bottom: @bit2;
+    }
+    .svg-i {
+        top: 0;
+        left: 0;
+        width: @iconWith;
+        height: @iconWith;
+        position: absolute;
+    }
+    .prev {
+        left: @bit2;
+    }
+    .next {
+        right: @bit2;
+    }
+    .big {
+        .next {
+            left: @bit + (2 * @bit2);
+            right: auto;
+        }
+        .prev {
+            left: @bit2;
+            right: auto;
+        }
+    }
+}

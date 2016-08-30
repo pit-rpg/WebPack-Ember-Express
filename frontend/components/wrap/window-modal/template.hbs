@@ -1,0 +1,42 @@
+<div class="con">
+    <div class="bg" {{action 'cansel' bubbles=false }}>
+    </div>
+    <div class="modal">
+        <div class="header">
+
+            <div class="modal-title">
+                {{svg-i icon=icon}} {{title}}
+            </div>
+
+            <div class='close' {{action 'cansel' bubbles=false }}>
+                {{svg-i icon='close' size=14}}
+            </div>
+
+        </div>
+        <div class="content">
+            {{yield}}
+        </div>
+        {{#if buttons}}
+            <div class="buttons">
+                {{#if btnOk}}
+                    <button type="button" {{action 'cansel' bubbles=false}}>
+                        {{#if okMsg}}
+                            {{okMsg}}
+                        {{else}}
+                            no
+                        {{/if}}
+                    </button>
+                {{/if}}
+                {{#if btnCansel}}
+                    <button type="button" {{action 'ok' bubbles=false}}>
+                        {{#if canselMsg}}
+                            {{canselMsg}}
+                        {{else}}
+                            yes
+                        {{/if}}
+                    </button>
+                {{/if}}
+            </div>
+        {{/if}}
+    </div>
+</div>

@@ -1,0 +1,42 @@
+@import "./colorsVars.less";
+@import "./base.less";
+
+
+.header-site {
+    height: @headerHeight;
+    background-color: @grey2;
+    font-size: 22px;
+}
+
+#site {
+    background-color: #ddf;
+    position: relative;
+    padding-top: @headerHeight;
+    min-height: 100%;
+}
+
+#page404 {
+    background: #010101 url('/images/site/chair-for-god.jpg') no-repeat bottom right;
+    // min-height: 100%;
+    position: absolute;
+    top: @headerHeight;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    padding: @headerHeight;
+
+    .errorName {
+        font-size: 42px;
+        margin-bottom: 16px;
+
+        b {
+            font-size: 64px;
+        }
+    }
+
+    .errorName2 {
+        font-size: 24px;
+        margin-bottom: 4px;
+    }
+}

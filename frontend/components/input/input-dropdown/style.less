@@ -1,0 +1,87 @@
+@import "../../../colorsVars.less";
+@lableHeigh:40px;
+@listOffset:10px;
+.input-dropdown {
+    position: relative;
+    display: inline-block;
+    font-size: 11pt;
+    .selectLable {
+        cursor: pointer;
+        height: @lableHeigh;
+        border: 1px solid @greyInputBorder;
+        border-radius: 5px;
+        background: @white;
+        padding: 8px 12px;
+        .svg-icon-view {
+            font-size: 0;
+            margin: 0 0 0 8px;
+        }
+        span {
+            color: @grey2;
+        }
+    }
+    .selectLable:hover{
+        border-color: @blueHover;
+    }
+    .selectLable.active {
+        border-color: @bluePressed;
+    }
+    .selectList {
+        @font-size: 10pt;
+        @h-padding: 12px;
+        @list-padding: 8px;
+        font-size: @font-size;
+        border-radius: 4px;
+        z-index: 10;
+        position: absolute;
+        left: 0;
+        top: @lableHeigh+@listOffset;
+        background-color: @white;
+        min-width: 150px;
+        max-width: 300px;
+        padding: @list-padding 0;
+        .svg-icon-view {
+            margin: 0;
+            padding: 0;
+            display: inline;
+            margin-right: 17px;
+        }
+        .item {
+            position: relative;
+            cursor: pointer;
+            padding: @h-padding 24px;
+            // display: table-cell;
+            vertical-align: middle;
+        }
+        .item.active {
+            background-color: @siteBgColorSecondary;
+        }
+        .item.active::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: @blue2;
+        }
+        .item:hover {
+            background-color: @siteBgColorMain;
+        }
+        .svg-i {
+            position: relative;
+            top: 4px;
+            margin-right: 14px;
+            width: 18px;
+            height: 18px;
+        }
+    }
+    .scroll-costume .CostumScrollRailY {
+        background-color: transparent;
+        right: 3px;
+    }
+    .selectList.openUp {
+        bottom: @lableHeigh+@listOffset;
+        top: auto;
+    }
+}

@@ -1,0 +1,25 @@
+{{#each modalHash.modals as |modal|}}
+    {{#window-modal
+
+        btnOk=modal.btnOk
+        okMsg=modal.okMsg
+
+        btnCansel=modal.btnCansel
+        canselMsg=modal.canselMsg
+
+        classNames=modal.classNames
+        value=modal.value
+        title=modal.title
+        icon=modal.icon
+        modalVisble=modal.modalVisble
+
+        close=(action 'rm' modal)
+        ok=(action 'okRm' modal)
+        cansel=(action 'canselrRm' modal)
+        show=(action 'show' modal)
+    }}
+
+    {{modal.component}}
+
+    {{/window-modal}}
+{{/each}}

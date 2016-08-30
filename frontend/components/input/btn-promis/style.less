@@ -1,0 +1,25 @@
+.btn-promis {
+    .iris {
+        background: url("/images/site/load.png") no-repeat;
+        background-size: cover;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        position: relative;
+        top: 2px;
+        animation-name: rotate;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        transition-property: transform;
+        transition-duration: 1s;
+    }
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}

@@ -1,0 +1,21 @@
+<div class='img'>
+    <img src={{image}} itemprop="image" />
+</div>
+
+<div class= {{if big 'big controls' 'controls'}}>
+    <div class='dots'>
+        {{#each model as |value key|}}
+            {{#if (eq key index)}}
+                <div class="dot active" {{action 'img' key}}> </div>
+            {{else}}
+                <div class="dot" {{action 'img' key}}></div>
+            {{/if}}
+        {{/each}}
+    </div>
+    <div {{action 'prev'}} class="prev">
+        {{svg-i icon='roLeft'}}
+    </div>
+    <div {{action 'next'}} class="next">
+        {{svg-i icon='roRight'}}
+    </div>
+</div>

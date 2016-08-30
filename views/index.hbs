@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <title>[MYAPP]</title>
+    <script src='/js/jquery.min.js'></script>
+    <script src='/js/TweenMax.min.js'></script>
+    <script src='/js/lodash.min.js'></script>
+    {{#if dev}}
+    <script src='/js/ember.debug.js'></script>
+    {{else}}
+    <script src='/js/ember.min.js'></script>
+    {{/if}}
+    <script src='/js/async.min.js'></script>
+    <script src='{{assets.common.js}}'></script>
+</head>
+
+<body>
+    <script src='{{assets.app.js}}'></script>
+</body>
+
+</html>

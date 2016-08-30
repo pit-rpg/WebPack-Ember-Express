@@ -1,0 +1,12 @@
+{{#each errors as |err|}}
+    {{#window-modal
+        title=err.name
+        value=err
+        close='delErr'
+        icon=err.icon
+    }}
+
+        {{err.message}}
+
+    {{/window-modal}}
+{{/each}}

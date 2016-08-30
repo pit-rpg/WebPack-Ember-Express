@@ -1,0 +1,52 @@
+@import "../../../colorsVars.less";
+// default
+.input-pagination {
+    ul {
+        padding: 0;
+        display: block;
+        text-align: center;
+    }
+
+    li {
+        display: inline-block;
+        // text-decoration: none;
+        a {
+            cursor: pointer;
+            // background-color: #162030;
+            padding: 4px;
+        }
+    }
+
+    .active a,
+    a:hover {
+        text-decoration: underline;
+        // background-color: rgba(0,0, 0, 0.7);
+    }
+}
+// site
+
+.input-pagination {
+    ul > .active > a,
+    ul > li > a:hover {
+        text-decoration: none;
+        background-color: @blue2;
+        color: @white;
+    }
+
+    li {
+        padding: 0 2px;
+    }
+
+    ul > li > a {
+        padding: 0;
+        display: block;
+        width: 32px;
+        height: 32px;
+        line-height: 30px;
+        vertical-align: middle;
+        text-align: center;
+        border-radius: @borderRadius;
+        background: @white;
+        border: solid 1px @greyInputBorder;
+    }
+}
